@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import path from 'path'
+import { ErrorHandler } from './configs/ErrorHandler.js'
 
 const app = express();
 
@@ -30,7 +31,7 @@ app.use(express.static(path.join(process.cwd(), './public')));
 
 
 // global error handler
-
+app.use(ErrorHandler);
 
 export {
   app
