@@ -33,6 +33,7 @@ app.use(express.static(path.join(process.cwd(), './public')));
 // global error handler
 app.use(ErrorHandler);
 
+
 export {
   app
 }
