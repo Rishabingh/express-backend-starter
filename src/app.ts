@@ -25,10 +25,10 @@ app.use(express.urlencoded({extended: true ,limit: '22kb'}));
 app.use(express.static(path.join(process.cwd(), './public')));
 
 // importing routes here
-
+import healthCheckRoute from './routes/healthcheck.routes.js'
 
 // defining route
-
+app.use('/healthcheck', healthCheckRoute);
 
 // global error handler
 app.use(ErrorHandler);
